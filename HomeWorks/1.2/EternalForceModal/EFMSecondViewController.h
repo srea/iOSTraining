@@ -13,7 +13,7 @@
 @protocol EMFSecondViewControllerDelegate <NSObject>
 
 // ここにDelegateメソッドの定義
-
+- (void)closeButtonTapped:(id)controller;
 @end
 
 
