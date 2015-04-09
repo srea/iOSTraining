@@ -19,7 +19,33 @@
     [super viewDidLoad];
 
     // TODO ここに課題を書き進めていってください
-
+    NSArray *data = @[
+                      @{
+                          @"domain" : @"mixi.jp",
+                          @"entry" : @[
+                                  @"list_voice.pl",
+                                  @"list_diary",
+                                  @"list_mymall_item",
+                                  ],
+                          },
+                      @{
+                          @"domain" : @"mmall.jp",
+                          @"entry" : @[
+                                  @{
+                                  @"path" : @"add_diary",
+                                  @"query" : @[
+                                          @{
+                                              @"tag_id" : @(7),
+                                              }
+                                          ],
+                                      }
+                                  ],
+                          },
+                      @{
+                          @"domain" : @"itunes.apple.com",
+                          }
+                      ];
+    NSLog(@"\n%@", data);
 
 }
 
