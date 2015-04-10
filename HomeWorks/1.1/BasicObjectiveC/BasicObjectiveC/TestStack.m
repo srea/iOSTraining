@@ -24,10 +24,14 @@
 
 - (id)pop
 {
-    NSInteger count = _stack.count;
-    id object = _stack[count - 1];
-    [_stack removeObject:object];
-    return object;
+    if (_stack.count) {
+        NSInteger count = _stack.count;
+        id object = _stack[count - 1];
+        [_stack removeObject:object];
+        return object;
+    } else {
+        return nil;
+    }
 }
 
 - (NSInteger)size

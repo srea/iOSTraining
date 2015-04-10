@@ -61,6 +61,7 @@
     NSLog(@"%@", [queue pop]);
     NSLog(@"%@", [queue pop]);
     NSLog(@"queue size: %ld", [queue size]);
+    NSLog(@"%@", [queue pop]); // sizeが0でpopを呼んでも落ちないほうが良い
     NSLog(@"========================");
     TestStack *stack = [[TestStack alloc] init];
     NSLog(@"stack size: %ld", [stack size]);
@@ -72,6 +73,7 @@
     NSLog(@"%@", [stack pop]);
     NSLog(@"%@", [stack pop]);
     NSLog(@"stack size: %ld", [stack size]);
+    NSLog(@"%@", [stack pop]); // sizeが0でpopを呼んでも落ちないほうが良い
     NSLog(@"========================");
 }
 
