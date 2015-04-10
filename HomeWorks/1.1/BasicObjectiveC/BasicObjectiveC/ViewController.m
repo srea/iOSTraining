@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "TestQueue.h"
+#import "TestStack.h"
 
 @interface ViewController ()
 
@@ -47,6 +49,30 @@
                       ];
     NSLog(@"\n%@", data);
 
+    // 課題２
+    NSLog(@"========================");
+    TestQueue *queue = [[TestQueue alloc] init];
+    NSLog(@"queue size: %ld件", [queue size]);
+    [queue push:@"1"];
+    [queue push:@"2"];
+    [queue push:@"3"];
+    NSLog(@"queue size: %ld", [queue size]);
+    NSLog(@"%@", [queue pop]);
+    NSLog(@"%@", [queue pop]);
+    NSLog(@"%@", [queue pop]);
+    NSLog(@"queue size: %ld", [queue size]);
+    NSLog(@"========================");
+    TestStack *stack = [[TestStack alloc] init];
+    NSLog(@"stack size: %ld", [stack size]);
+    [stack push:@"1"];
+    [stack push:@"2"];
+    [stack push:@"3"];
+    NSLog(@"stack size: %ld", [stack size]);
+    NSLog(@"%@", [stack pop]);
+    NSLog(@"%@", [stack pop]);
+    NSLog(@"%@", [stack pop]);
+    NSLog(@"stack size: %ld", [stack size]);
+    NSLog(@"========================");
 }
 
 - (void)didReceiveMemoryWarning
